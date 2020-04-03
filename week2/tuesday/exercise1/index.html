@@ -7,10 +7,11 @@
     <title>Exercise 1</title>
 </head>
     <body>
+        <main>
         <h1>Profil</h1>
         <h3>Hier können Sie Ihre Adress-Angaben einsehen und an passen</h3>
         <form action="do_something.html" method="post">
-            <fieldset id="persönlichedaten">
+            <fieldset id="personaldates">
             <legend>Persönliche Daten</legend>
             <div>
                 <label for="title">Titel</label>
@@ -24,21 +25,22 @@
                 <label for="lname">Nachname</label>
                 <input type="text" id="lname" name="lastname" placeholder="Muster" required>
             </div>
-            <div>
-               <label for="mänlich">Geschecht</label>
-               <input type="radio" id="mänlich" name="geschlecht" value="mänlich">
-               <label for="mänlich"> M</label> 
-               <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
-               <label for="weiblich"> W</label>
+            <div class="button">
+               <label>Geschecht</label>
+               <input type="radio" id="m" name="geschlecht" value="mänlich">
+               <label for="m"> M</label> 
+               <input type="radio" id="w" name="geschlecht" value="weiblich">
+               <label for="w"> W</label>
             </div>
-            <div>
-                <label for="german">Sprache</label>
-                 <label for="german">DE</label>
-                 <input type="checkbox" id="german" name="german">
-                 <label for="french">FR</label>
-                 <input type="checkbox" id="french" name="french">
-                 <label for="italian">IT</label>
-                 <input type="checkbox" id="italian" name="italian">
+            <div class="button">
+                <label for="sprache">Sprache</label>
+                 <input type="radio" id="de" name="sprache" value="deutsch">
+                 <label for="de">DE</label>
+                 <input type="radio" id="fr" name="sprache" value="french">
+                 <label for="fr">FR</label>
+                 <input type="radio" id="it" name="sprache" value="italian">
+                 <label for="it">IT</label>
+                 
              </div>
             </fieldset>
             <fieldset id="kontaktdaten">
@@ -84,32 +86,33 @@
                     <input type="url" name="Homepage" id="url" placeholder="optional">
                 </div>
                 <div>
-                    <label for="adress1">Adress / Haus Nr</label>
-                    <input type="text" name="adress" id="adress1" placeholder="Musterstrasse" required>
-                    <input type="number" name="haus-nr" id="hausnr" min="0" placeholder="33" required>
+                    <label for="h-adress">Adress</label><label for="haus-nr"> / Haus Nr</label>
+                    <input type="number" name="haus-nr" id="haus-nr" min="0" placeholder="33" required>
+                    <input type="text" name="h-adress" id="h-adress" placeholder="Musterstrasse" required>
                 </div>
                 <div>
                     <label for="zadress">Zusatz Adress</label>
                     <input type="text" name="zadress" id="zadress" placeholder="optional" >
                 </div>
                 <div>
-                    <label for="plz"> PLZ / Ort</label>
-                    <input type="number" name="plz" id="plz" min="0" placeholder="8800" required>
+                    <label for="plz"> PLZ</label> <label for="ort"> / Ort</label>
                     <input type="text" name="ort" id="ort" placeholder="Musterstadt" required>
+                    <input type="number" name="plz" id="plz" min="0" placeholder="8800" required>
                 </div>
                 <div>
-                    <label for="kanton"> Kanton / Land</label>
-                    <input type="text" name="kanton" id="kanton"  placeholder="ZH" required>
+                    <label for="kanton"> Kanton</label> <label for="land"> / Land</label>
                     <input type="text" name="land" id="land" placeholder="Schweiz" required>
+                    <input type="text" name="kanton" id="kanton"  placeholder="ZH" required>
+                    
                 </div>
-                <div>
+                <div id="speichern">
                     <input type="submit" value="Speichern">
                 </div>
             </fieldset>
             
         </form>
     
-
+    </main>
     </body>
 
 </html>

@@ -1,0 +1,166 @@
+html{
+    box-sizing: border-box;
+} 
+
+body{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: gray;
+    background-color: rgba(235, 225, 225, 0.295);
+    
+}
+
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    padding: 50px;
+}
+
+div {
+    margin-top: 20px;
+}
+div.button {
+    margin-top: 30px;
+}
+
+h1 {
+    border-top: black solid 10px;
+    max-width: 150px;
+    margin-left: 2px;
+    border-radius: 5%;
+}
+h3 {
+    border-bottom: 5px solid black;
+    padding-bottom: 30px;
+}
+
+fieldset {
+    padding: 20px;
+    padding-top: 0px;
+    border: none;
+    border-bottom: solid black 2px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+/*
+to get rid of the bottom border
+*/
+fieldset#adressdaten{
+    border-bottom: none;
+}
+
+/*
+positioning all of the input feiled in the right 
+*/
+input:not([type="radio"]) {
+    position:relative;
+    float: right;;
+    border: none;
+    border-bottom: solid gray 1px;
+    padding: 6px;
+    margin-right: auto;
+    width: 300px;
+    margin-left: 4px;
+}
+
+/*
+the style of the submit button
+*/
+input[type="submit"]{
+    position: relative;
+    float: right;
+    color: white;
+    background-color: rgb(206, 34, 4);
+    text-align: center;
+    width: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bolder;
+    margin-right: auto;
+}
+/*
+hide the select button from the page
+*/
+input[type="radio"]{
+    visibility: hidden;
+}
+
+label,legend {
+    font-weight: bolder;
+   
+}
+/*
+postioning the labels in the right
+ */
+label[for="de"], label[for="fr"], label[for="it"] {
+    display: inline-flex;
+    position: relative;
+    float: right;
+    padding: 10px;
+    border: solid gray 1px;
+    width: 86px;
+    text-align: center;
+    margin-right: auto;
+}
+
+label[for="m"], label[for="w"] {
+    display: inline-flex;
+    position: relative;
+    float: right;
+    padding: 10px;
+    border: solid gray 1px;
+    width: 140px;
+    text-align: center;
+    margin-right: auto;
+}
+
+/*
+style of the labels when the visitors hover over the label
+*/
+label[for="de"]:hover, label[for="fr"]:hover, label[for="it"]:hover {
+ color: orangered;
+ border-bottom: solid orangered 3px;
+ cursor: pointer;
+}
+
+label[for="m"]:hover, label[for="w"]:hover{
+    color: orangered;
+    border-bottom: solid orangered 3px;
+    cursor: pointer;
+   }
+
+/*
+keep the style of the selected button after moving the mouse curser away
+*/
+
+input:checked + label[for="de"],
+input:checked + label[for="fr"],
+input:checked + label[for="it"]{
+ color: orangered;
+ border-bottom: solid orangered 3px;
+}
+
+input:checked + label[for="m"],
+input:checked + label[for="w"]{
+color: orangered;
+ border-bottom: solid orangered 3px;
+ }
+
+   
+
+#plz, #ort,#kanton, #land, #haus-nr,#h-adress{
+    display: inline-flex;
+    position: relative;
+    float:right;
+    width:240px;
+    margin-right: auto;
+}
+ 
+#plz, #kanton, #haus-nr{
+    width: 50px;
+}
+ 
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <h1>books</h1>
+    <ul></ul>
+    <script>
+        var books = [
+        {
+        title: 'world wide',
+        price: "25 $",
+        alreadysold: false
+        }, {
+        title: 'The darkness',
+        price: "50 $",
+        alreadysold: true
+        }, {
+        title: 'The sky',
+        price: "49 $",
+        alreadysold: true
+        }
+        ];
+        for(i=0;i<books.length;i++){
+            let bookList=document.createElement("p");
+            let book= document.createTextNode(books[i].title + "  Price:" +books[i].price+"  This book is already sold"+ books[i].alreadysold);
+            bookList.appendChild(book);
+            document.body.appendChild(bookList);  
+        }
+        
+    </script>
+</body>
+</html>

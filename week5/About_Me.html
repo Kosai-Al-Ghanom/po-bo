@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        .list-item{color: red;}
+
+    </style>
+</head>
+<body>
+    <h1>About Me</h1>
+    <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites: <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+    </ul>
+<script>
+    document.body.style.fontFamily="Arial, sans-serif";
+    document.getElementById("nickname").textContent="Kosai";
+    document.getElementById("favorites").textContent="Blue";
+    document.getElementById("hometown").textContent="Syria";
+    let items=document.getElementsByTagName("li");
+    for(let i=0;i<items.length;i++){
+        items[i].className="list-item";
+    }
+    let myPicture=document.createElement("img");
+    myPicture.src="fg.jpg";
+    document.body.appendChild(myPicture);
+
+    
+    
+
+</script>     
+</body>
+</html>

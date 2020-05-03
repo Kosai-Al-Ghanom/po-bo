@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Box</title>
+    <style>
+        p {width: 100px;
+            height: 300px;
+            border: red solid 2px;
+            position: absolute;
+            }
+    </style>
+</head>
+<body>
+    <p style="top:0px;" id="parg" onmousewheel="moveBox()">Move box</p>
+    
+    <script>
+        let y=0;
+        function moveBox(){
+           y=
+            let par= document.getElementById("parg");
+           console.log(par.style.top);
+        }
+        
+    </script>
+</body>
+</html>

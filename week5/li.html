@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="people"></ul>
+    <script>
+        const people=["Kosai","Nedal","mohamad","ali","khaled"];
+        let ul=document.querySelector(".people");
+        let html="";
+
+
+        people.forEach(function(person,num){
+            html += `<li style="color:blue">${person}${num}</li>`;
+        });
+        ul.innerHTML=html;
+    </script>
+</body>
+</html>

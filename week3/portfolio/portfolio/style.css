@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Catamaran', sans-serif;
+    text-decoration: none;
+}
+/*HEADER*/
+
+header {
+    width: 100%;
+    height: 600px;
+    background-image: url('img/bg.jpg');
+    overflow: hidden;
+}
+
+header .header-logo img {
+    margin: 0;
+    padding: 0 40px 0 250px;
+    text-align: left;
+    height: 50px;
+    width: 100px;
+    float: left;
+}
+ header nav ul {
+    display: block;
+    margin: 0 150px 0 0;
+    float: right;   
+ }
+
+ header nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 5px;
+    color: #fff;
+    line-height: 50px;    
+}
+
+header nav ul li a {
+     font-size: 12px;
+     color: #fff;
+     line-height: 50px;
+     text-transform: uppercase;    
+}
+header .about{
+   margin-left: 250px;
+   margin-top: 250px;     
+}
+
+header .about h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+}
+
+header .about p {
+    color: #fff;
+    font-weight: 800;
+}
+
+header .btn {
+    display: block;
+    background: none;
+    margin-top: 30px;
+    float: left;
+    padding: 5px 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+/*SECTION ONE*/
+
+.design {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.design .design-img {
+    width: 100%;
+    flex: 0 0 400px;
+    margin: 100px 0 0 200px;
+}
+
+.design .design-img img {
+    width: 400px;
+    height: 300px;
+}
+
+.design .design-content {
+    margin: 90px 200px 0 0;
+    padding-left: 50px;
+}
+
+.design h2 {
+   font-size: 24px;
+   font-weight: lighter;
+   text-transform: uppercase;
+   color: gray;
+   padding-bottom: 20px;
+}
+
+.design h2::after {
+    display: block;
+    content:"";
+    height: .1rem;
+    width: 50px;
+    background-color: black;
+}
+
+.design span {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.design p {
+    font-size: 12px;
+    color: gray;
+    padding-bottom: 20px;
+}
+
+.design-btn {
+    display: block;
+    background: none;
+    margin-top: 10px;
+    float: left;
+    padding: 5px 15px;
+    font-size: 10px;
+    color: #111;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+/*SECTION TWO*/
+
+.services {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    background-color: whitesmoke;
+}
+.services article {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.services article p {
+    font-size: 14px;
+    color: gray;
+}
+
+.services article h3 {
+    font-size: 26px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: darkslategray
+}
+
+.services article h3::after {
+    display: block;
+    content:"";
+    background-color: darkslategray;
+    height: 1px;
+    width: 50px;
+    margin: 10px auto;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.services .wrapper div {
+    float: left;
+    width: 180px;
+    height: 120px;
+    margin: 10px 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services .wrapper div img {
+    width: 50px;
+    padding: 15px 0 10px 0;
+    border-radius: 50%;
+    
+}
+
+.services h4 {
+    font-size: 12px;
+    font-weight: 100;
+    color: darkslategray;
+}

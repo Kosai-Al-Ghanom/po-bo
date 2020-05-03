@@ -1,0 +1,107 @@
+Create a to-do list in JavaScript. What does it need?
+ Which data structure? Where would you use functions? Some ideas:
+- user input of a new to-do.
+- list all to-dos in an alphabetically order in the DOM.
+- your to-do list should be only visible by you. Make it password protected.
+- if you get stuck with the code, try to put in comments as pseudo-code first or instead.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a to do list in Javascript</title>
+</head>
+<body>
+    <!--input: new to do item
+        output:to do list
+        -->
+        <h1>To do list</h1>
+            <label for="add">Add new item</label>
+            <input type="text" name="new_item">
+            <button>Add</button>
+         <ul></ul>
+        
+    
+
+    <script>
+        /*
+        2. add password protection 
+        3. delete item
+        4. mark item as done
+        5. sort the list alphabetically
+        */
+        /*declaring variables*/
+        
+        const username= "Kosai";
+        const password= "super";
+            
+
+        var user= prompt("Please enter your username");
+        var pass= prompt("Please enter your password")
+        function validate(){
+        if (user ===username && pass===password){
+            alert("welcome "+username);
+            return true;
+        }else {
+            alert("your details are not correct");
+            return false;
+        }
+    }
+        
+
+        let ul=document.querySelector("ul");
+        let input = document .querySelector("input");
+        let button = document.querySelector("button");
+        let array =[];
+        let errorMessage="";
+        
+        /*get input value*/
+        
+        button.addEventListener("click", addListItem);
+        input.addEventListener("keypress", addListItemOnReturn);
+
+        function addListItemOnReturn(event){
+            if(event.keyCode === 13){
+                addListItem();
+            }
+        }
+        /*trim() is for delete the white spaces*/
+        function isInputValid(){
+            input.value = input.value.trim();
+            if(input.value !== ""){
+                /*looop through array and if array item is equal to value return false*/
+                for(let i = 0; i<array.length;i++){
+                    if(array[i]== input.value){
+                        errorMessage="This to_do is already in your list.";
+                        return false;
+                    }
+                }
+                return true;
+            }
+            errorMessage="please enter something to do";
+            return flase;
+            
+        }
+        
+        function addListItem(){
+                if(isInputValid()){
+                    array.push(input.value);
+                    let li =document.createElement("li");
+                    li.innerText=input.value;
+                    ul.appendChild(li);
+                    clearInput();
+                } else {
+                    alert(errorMessage);
+                }
+            }
+        
+        function clearInput(){
+            input.value="";
+            input.placeholder="enter new item";
+            input.focus();
+        }
+       
+        /*function:create a new list element and add to the ul*/
+    </script>
+</body>
+</html>

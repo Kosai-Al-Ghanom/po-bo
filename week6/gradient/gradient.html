@@ -1,0 +1,23 @@
+Create a background gradient generator:
+1. Create a simple HTML file with the tags needed (see PDF of final generator)
+2. Add the basic CSS file attached (style.css) and edit it to add a default gradient in the background
+3. Add a JavaScript file
+4. For each color of the gradient change the background gradient style with the new colors
+5. Additionally output the gradient style to the HTML (see PDF of final generator)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gradient.css">
+    
+</head>
+<body style="background: linear-gradient(to right,rgb(152, 240, 10) , red);">
+    <h1>BACKGROUND GENERATOR</h1>
+    <input type="color" id="color1" value=""><input type="color" id="color2" value="">
+    <h3>CURRENT CSS BACKGROUND</h3>
+    <h4></h4>
+    <script src="gradient.js"></script>
+</body>
+</html>
